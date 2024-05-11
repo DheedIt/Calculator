@@ -1,6 +1,6 @@
 ﻿using Calculator.Classes;
 
-namespace Calculator.Menu
+namespace Calculator.Menues
 {
     public interface IMenu
     {
