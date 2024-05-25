@@ -3,7 +3,7 @@ using Castle.Facilities.Startable;
 using Castle.MicroKernel.Registration;
 using Castle.MicroKernel.SubSystems.Configuration;
 using Castle.Windsor;
-
+using Calculator.Operations;
 
 namespace Calculator.Classes
 {

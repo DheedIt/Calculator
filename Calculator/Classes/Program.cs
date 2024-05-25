@@ -1,12 +1,10 @@
-﻿using System;
-using System.ComponentModel;
-using Calculator.Classes;
+﻿using Calculator.Classes;
 using Castle.Facilities.Startable;
 using Castle.MicroKernel.Resolvers.SpecializedResolvers;
 using Castle.Windsor;
 internal class Program
 {
-    private static WindsorContainer _container = new WindsorContainer();
+    private static IWindsorContainer _container = new WindsorContainer();
     static void Main(string[] args)
     {
         try
@@ -28,4 +26,4 @@ internal class Program
         }
 
     }
-}   
+}

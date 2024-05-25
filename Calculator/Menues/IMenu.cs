@@ -1,9 +1,9 @@
-﻿using Calculator.Classes;
+﻿using Calculator.Operations;
 
 namespace Calculator.Menues
 {
     public interface IMenu
     {
-        public Operation<double> Show(Operation<double>[] operations);
+        public Operation<double> Show();
     }
 }

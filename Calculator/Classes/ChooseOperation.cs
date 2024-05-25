@@ -1,13 +1,19 @@
 ﻿using System;
-
+using Calculator.Operations;
 namespace Calculator.Classes
 {
-    public class ChooseOperation
+    
+    public class ChooseOperation : IChooseOperation
     {
-        public Operation<double> returnOperation(Operation<double>[] operations)
+        ChooseOperation(IEnterOperationsNumber operationsNumber)
+        {
+            this.operationsNumber = operationsNumber;
+        }
+        IEnterOperationsNumber operationsNumber;
+        public Operation<double> returnOperation(IOperationProvider operation)
         {
             Console.WriteLine("Выберите действие");
-            return operations[Convert.ToInt32(Console.ReadLine()) - 1]; ;
+            return operation.Get().ToArray()[operationsNumber.Get() - 1];
         }
     }
 }
