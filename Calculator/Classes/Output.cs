@@ -1,7 +1,7 @@
 ﻿using System;
 namespace Calculator.Classes
 {
-    class Output
+    public class Output : IOutput
     {
         public void ResultOutput(double result)
         {

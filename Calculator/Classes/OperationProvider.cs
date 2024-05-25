@@ -3,10 +3,7 @@ using Castle.Windsor;
 using Calculator.Operations;
 namespace Calculator.Classes
 {
-    public interface IOperationProvider
-    {
-        public IEnumerable<Operation<double>> Get();
-    }
+    
     public class OperationProvider : IOperationProvider
     {
         private IEnumerable<Operation<double>> operations;
