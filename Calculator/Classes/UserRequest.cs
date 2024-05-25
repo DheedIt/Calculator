@@ -3,9 +3,9 @@ using System.Linq;
 using System.Text.RegularExpressions;
 namespace Calculator.Classes
 {
-    public interface IUserRequestWithOneElement { }
-    public interface IUserRequestWithTwoElements { }
-    public class UserRequest : IUserRequestWithOneElement
+    public interface IUserRequest { }
+
+    public class UserRequest 
     {
         public double EnterNumbers()
         {
@@ -16,5 +16,4 @@ namespace Calculator.Classes
 
 
     }
-    
 }

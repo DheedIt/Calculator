@@ -23,7 +23,7 @@ namespace Calculator.Classes
         public void Run()
         {
             operations = operationProvider.Get();
-            output.ResultOutput(menu.Show().Calculate(rq.EnterNumbers()));
+            output.ResultOutput(menu.Show().Calculate();
         }
 
     }

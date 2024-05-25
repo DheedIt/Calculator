@@ -1,14 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿using Calculator.Classes;
+using Calculator.IOperations;
 namespace Calculator.Operations
 {
-    internal class AdditionOperation : Operation<double>
+    public class AdditionOperation : MathOperation
     {
-        public override string Name => "Сложение (/)";
+    AdditionOperation(
+        IAdditionOperation additionOperation,
+        ) : base("Сложение"){
+        
+        }
+        
         public override double Calculate(double[] args)
         {
            

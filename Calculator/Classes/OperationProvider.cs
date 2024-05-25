@@ -6,7 +6,7 @@ namespace Calculator.Classes
     
     public class OperationProvider : IOperationProvider
     {
-        private IEnumerable<Operation<double>> operations;
+        private IEnumerable operations;
         public OperationProvider(IEnumerable<Operation<double>> operations)
         {
             this.operations = operations;
