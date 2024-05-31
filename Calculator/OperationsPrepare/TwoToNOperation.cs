@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Calculator.Operations
+namespace Calculator.OperationsPrepare
 {
-    class NToNOperation : Operation<double>
+    class TwoToNOperation : Operation<double>
     {
-        public override string Name => "f в n степени (f^n)";
+        public override string Name => "Квадрат числа (n ^ 2)";
         public override double Calculate(double[] args)
         {
-            return Math.Pow(args[0], args[1]);
+            return Math.Pow(2, args[0]);
         }
     }
 }

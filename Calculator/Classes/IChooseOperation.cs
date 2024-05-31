@@ -9,6 +9,6 @@ namespace Calculator.Classes
 {
     public interface IChooseOperation
     {
-        public Operation<double> returnOperation(IOperationProvider operation);
+        public IOperation<double> returnOperation(IOperationProvider operation);
     }
 }

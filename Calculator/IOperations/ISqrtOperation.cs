@@ -7,10 +7,9 @@ using System.Threading.Tasks;
 using System;
 namespace Calculator.IOperations
 {
-    public interface IAdditionOperation
+    public interface ISqrtOperation
     {
-        public string Name { get; }
-        public double Calculate(double[] args);
+        public double Calculate(double num1, double num2);
     }
 }
 

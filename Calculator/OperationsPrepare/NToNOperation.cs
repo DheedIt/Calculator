@@ -4,15 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Calculator.Operations
+namespace Calculator.OperationsPrepare
 {
-    class NToTwoOperation : Operation<double>
+    class NToNOperation : Operation<double>
     {
-        public override string Name => "2 в n степени (2 ^ n)";
+        public override string Name => "f в n степени (f^n)";
         public override double Calculate(double[] args)
         {
-
-            return Math.Pow(2, args[0]);
+            return Math.Pow(args[0], args[1]);
         }
     }
 }

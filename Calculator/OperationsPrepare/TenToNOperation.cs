@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Calculator.Operations
+namespace Calculator.OperationsPrepare
 {
-    class SqrtOperation : Operation<double>
+    class TenToNOperation : Operation<double>
     {
-        public override string Name => "Корень числа (√n)";
+        public override string Name => "10 в n степени (10^n)";
         public override double Calculate(double[] args)
         {
-            return Math.Sqrt(args[0]);
+            return Math.Pow(10, args[0]);
         }
     }
 }

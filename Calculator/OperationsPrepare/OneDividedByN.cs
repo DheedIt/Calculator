@@ -4,15 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Calculator.Operations
+namespace Calculator.OperationsPrepare
 {
-    class ExpoOperation : Operation<double>
+    class OneDivededByN : Operation<double>
     {
-        public override string Name => "e в n степени (e^n)";
+        public override string Name => "n в -1 степени (1/n)";
         public override double Calculate(double[] args)
         {
-            
-            return Math.Exp(args[0]);
+            return 1 / args[0];
         }
     }
 }

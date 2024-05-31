@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Calculator.Operations
+namespace Calculator.OperationsPrepare
 {
     class SubstractionOperation : Operation<double>
     {
