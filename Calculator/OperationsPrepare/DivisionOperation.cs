@@ -11,20 +11,20 @@ namespace Calculator.OperationsPrepare
     public class DivisionOperation : MathOperation
     {
         DivisionOperation(
-            IAdditionOperation additionOperation,
+            IDivisionOperation divisionOperation,
             IOperationArgsProvider<NStandartArgs> args
             ) : base("Сложение")
         {
-            this.additionOperation = additionOperation;
+            this.divisionOperation = divisionOperation;
             this.args = args;
         }
-        IAdditionOperation additionOperation;
+        IDivisionOperation divisionOperation;
         IOperationArgsProvider<NStandartArgs> args;
         public override double Calculate()
         {
 
             NStandartArgs args = this.args.Get();
-            return additionOperation.Calculate(args.NumberArr);
+            return divisionOperation.Calculate(args.NumberArr);
         }
     }
 }

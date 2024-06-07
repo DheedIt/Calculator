@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Calculator.Classes;
+using Calculator.IOperations;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,13 +8,23 @@ using System.Threading.Tasks;
 
 namespace Calculator.OperationsPrepare
 {
-    class ExpoOperation : Operation<double>
+    public class ExpoOperation : MathOperation
     {
-        public override string Name => "e в n степени (e^n)";
-        public override double Calculate(double[] args)
+        ExpoOperation(
+            IExpoOperation expoOperation,
+            IOperationArgsProvider<OneStandartArgs> args
+            ) : base("Сложение")
         {
-            
-            return Math.Exp(args[0]);
+            this.expoOperation = expoOperation;
+            this.args = args;
+        }
+        IExpoOperation expoOperation;
+        IOperationArgsProvider<OneStandartArgs> args;
+        public override double Calculate()
+        {
+
+            OneStandartArgs args = this.args.Get();
+            return expoOperation.Calculate(args.Number);
         }
     }
 }

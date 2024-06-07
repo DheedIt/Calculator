@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Calculator.Classes;
+using Calculator.IOperations;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,12 +8,23 @@ using System.Threading.Tasks;
 
 namespace Calculator.OperationsPrepare
 {
-    class LogarithmOperation : Operation<double>
+    public class LogarithmOperation : MathOperation
     {
-        public override string Name => "Логарифм с основанием a (loga x)";
-        public override double Calculate(double[] args)
+        LogarithmOperation(
+            ILogarithmOperation logarithmOperation,
+            IOperationArgsProvider<TwoStandartArgs> args
+            ) : base("Сложение")
         {
-            return Math.Log(args[0], args[1]);
+            this.logarithmOperation = logarithmOperation;
+            this.args = args;
+        }
+        ILogarithmOperation logarithmOperation;
+        IOperationArgsProvider<TwoStandartArgs> args;
+        public override double Calculate()
+        {
+
+            TwoStandartArgs args = this.args.Get();
+            return logarithmOperation.Calculate(args.Number1, args.Number2);
         }
     }
 }

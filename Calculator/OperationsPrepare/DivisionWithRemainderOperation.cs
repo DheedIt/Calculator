@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Calculator.Classes;
+using Calculator.IOperations;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,17 +8,23 @@ using System.Threading.Tasks;
 
 namespace Calculator.OperationsPrepare
 {
-    class DivisionWithRemainderOperation : Operation<double>
+    public class DivisionWithRemainderOperation : MathOperation
     {
-        public override string Name => "Деление с остатком (%)";
-        public override double Calculate(double[] args)
+        DivisionWithRemainderOperation(
+            IDivisionWithRemainderOperation divisionOperation,
+            IOperationArgsProvider<NStandartArgs> args
+            ) : base("Сложение")
         {
-            for (int i = 1; i < args.Length; ++i)
-                if (args[i] == 0)
-                    throw new Exception("Division by zero\n");
-                else
-                    args[0] %= args[i];
-            return args[0];
+            this.divisionOperation = divisionOperation;
+            this.args = args;
+        }
+        IDivisionWithRemainderOperation divisionOperation;
+        IOperationArgsProvider<NStandartArgs> args;
+        public override double Calculate()
+        {
+
+            NStandartArgs args = this.args.Get();
+            return divisionOperation.Calculate(args.NumberArr);
         }
     }
 }

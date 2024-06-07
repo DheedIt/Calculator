@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Calculator.Classes;
+using Calculator.IOperations;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,15 +8,23 @@ using System.Threading.Tasks;
 
 namespace Calculator.OperationsPrepare
 {
-    class FactorialOperation : Operation<double>
+    public class FactorialOperation : MathOperation
     {
-        public override string Name => "Факториал (!)";
-        public override double Calculate(double[] args)
+        FactorialOperation(
+            IFactorialOperation factorialOperation,
+            IOperationArgsProvider<OneStandartArgs> args
+            ) : base("Сложение")
         {
-            int k = 1;
-            for (int i = 1; i <= args[0]; ++i)
-                k *= i;
-            return k;
+            this.factorialOperation = factorialOperation;
+            this.args = args;
+        }
+        IFactorialOperation factorialOperation;
+        IOperationArgsProvider<OneStandartArgs> args;
+        public override double Calculate()
+        {
+
+            OneStandartArgs args = this.args.Get();
+            return factorialOperation.Calculate(args.Number);
         }
     }
 }

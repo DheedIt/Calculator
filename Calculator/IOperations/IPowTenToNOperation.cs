@@ -9,7 +9,7 @@ namespace Calculator.IOperations
 {
     public interface IPowTenToNOperation
     {
-        public double Calculate(double num1, double num2);
+        public double Calculate(double num);
     }
 }
 

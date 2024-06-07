@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System;
 namespace Calculator.IOperations
 {
-    public interface IPowNToNOperation
+    public interface IPowNByNOperation
     {
         public double Calculate(double num1, double num2);
     }
