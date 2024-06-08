@@ -5,14 +5,14 @@ namespace Calculator.OperationsPreparation
     public class PowTenToNOperation : MathOperation
     {
         PowTenToNOperation(
-            IPowTenToNOperation powTenToNOperation,
+            IPowTenByNOperation powTenToNOperation,
             IOperationArgsProvider<OneStandartArgs> args
             ) : base("Сложение")
         {
             this.powTenToNOperation = powTenToNOperation;
             this.args = args;
         }
-        IPowTenToNOperation powTenToNOperation;
+        IPowTenByNOperation powTenToNOperation;
         IOperationArgsProvider<OneStandartArgs> args;
         public override double Calculate()
         {

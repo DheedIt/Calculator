@@ -2,23 +2,23 @@
 using Calculator.IOperations;
 namespace Calculator.OperationsPreparation
 {
-    public class ExpoOperation : MathOperation
+    public class PowNByExpoOperation : MathOperation
     {
-        ExpoOperation(
-            IExpoOperation expoOperation,
+        PowNByExpoOperation(
+            IPowNByExpoOperation powNByExpoOperation,
             IOperationArgsProvider<OneStandartArgs> args
             ) : base("Сложение")
         {
-            this.expoOperation = expoOperation;
+            this.powNByExpoOperation = powNByExpoOperation;
             this.args = args;
         }
-        IExpoOperation expoOperation;
+        IPowNByExpoOperation powNByExpoOperation;
         IOperationArgsProvider<OneStandartArgs> args;
         public override double Calculate()
         {
 
             OneStandartArgs args = this.args.Get();
-            return expoOperation.Calculate(args.Number);
+            return powNByExpoOperation.Calculate(args.Number);
         }
     }
 }

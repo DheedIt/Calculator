@@ -1,13 +1,13 @@
 ﻿using Calculator.IOperations;
 namespace Calculator.Operations
 {
-    public class Division : IDivisionOperation
+    public class Multiplication : IMultiplicationOperation
     {
         public double Calculate(double[] args)
         {
-           for(int i = 1; i < args.Length; i++)
+            for(int i = 1; i < args.Length; i++)
             {
-                args[0] /= args[i];
+                args[0] *= args[i];
             }
             return args[0];
         }

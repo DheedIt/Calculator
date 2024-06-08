@@ -4,10 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using System;
 namespace Calculator.IOperations
 {
-    public interface IExpoOperation
+    public interface IPowTwoByNOperation
     {
         public double Calculate(double num);
     }
 }
+
