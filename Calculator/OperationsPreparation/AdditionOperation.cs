@@ -1,6 +1,6 @@
 ﻿using Calculator.Classes;
 using Calculator.IOperations;
-namespace Calculator.OperationsPrepare
+namespace Calculator.OperationsPreparation
 {
     public class AdditionOperation : MathOperation
     {

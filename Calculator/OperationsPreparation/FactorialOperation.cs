@@ -1,12 +1,6 @@
 ﻿using Calculator.Classes;
 using Calculator.IOperations;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Calculator.OperationsPrepare
+namespace Calculator.OperationsPreparation
 {
     public class FactorialOperation : MathOperation
     {

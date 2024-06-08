@@ -1,24 +1,18 @@
 ﻿using Calculator.Classes;
 using Calculator.IOperations;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Calculator.OperationsPrepare
+namespace Calculator.OperationsPreparation
 {
-    public class DivisionWithRemainderOperation : MathOperation
+    public class DivisionOperation : MathOperation
     {
-        DivisionWithRemainderOperation(
-            IDivisionWithRemainderOperation divisionOperation,
+        DivisionOperation(
+            IDivisionOperation divisionOperation,
             IOperationArgsProvider<NStandartArgs> args
             ) : base("Сложение")
         {
             this.divisionOperation = divisionOperation;
             this.args = args;
         }
-        IDivisionWithRemainderOperation divisionOperation;
+        IDivisionOperation divisionOperation;
         IOperationArgsProvider<NStandartArgs> args;
         public override double Calculate()
         {
